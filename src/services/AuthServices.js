@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const registerUser = (data) => {
-  return axios.post("/user/register", data);
+  return axios.post(`${import.meta.env.VITE_API_URL}/user/register`, data);
 };
 
 const loginUSer = (data) => {
