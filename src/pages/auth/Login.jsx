@@ -17,8 +17,8 @@ const Login = () => {
       const data={email,password};
       const res= await AuthServices.loginUSer(data);
       toast.success(res.data.message);
+      localStorage.setItem(`${import.meta.env.VITE_LOCAL_KEY}`,JSON.stringify(res.data));
       navigate('/home');
-      localStorage.setItem('todoapp',JSON.stringify(res.data));
     } catch (err) {
       toast.error(getErrorMessage(err));
     }

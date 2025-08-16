@@ -7,12 +7,12 @@ const Navbar = () => {
     const navigate =useNavigate();
 
     useEffect(()=>{
-        const userData=JSON.parse(localStorage.getItem('todoapp'));
+        const userData=JSON.parse(localStorage.getItem(`${import.meta.env.VITE_LOCAL_KEY}`));
         setUsername(userData && userData.user.username);
     },[])
 
     const logoutHandler = () => {
-        localStorage.removeItem('todoapp');
+        localStorage.removeItem(`${import.meta.env.VITE_LOCAL_KEY}`);
         toast.success("logout successfully");
         navigate('/login');
     }

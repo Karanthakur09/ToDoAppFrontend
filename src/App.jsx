@@ -4,6 +4,7 @@ import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
 import { Toaster } from 'react-hot-toast'
 import HomePage from './pages/home/HomePage'
+import TodoList from './pages/todos/TodoList'
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<HomePage/>}/>
         
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/todoList" element={<TodoList />} />  */}
+        {/* <Route path="/about" element={<About />} />*/}
+        <Route path="/todoList" element={<TodoList />} />  
       </Routes>
       <Toaster/>
     </div>
